@@ -90,7 +90,17 @@ body {
 .header {
     padding-top: 24px;
     padding-bottom: 25px;
+    border: 1px solid #ECECEC;
 }
+
+.header-section {
+    display: flex;
+}
+
+.nav {
+    display: flex;
+}
+
 /* Logo */
 
 
@@ -111,7 +121,11 @@ body {
 /* navigation */
 
 .menu-nav-list {
+    display: flex;
     color: var(--title-text-color);
+}
+.menu-nav-item:not(:last-child) {
+    margin-right: 50px;
 }
 .menu-nav-link {
     font-weight: 500;
@@ -126,6 +140,10 @@ body {
 }
 
 /* contacts header*/
+.contacts-list {
+    display: flex;
+
+}
 
 /* Section hero */
 
@@ -164,7 +182,16 @@ body {
 
 /* Section features */
 
+.features {
+    padding-top: 94px;
+}
+
+.features-list {
+    display: flex;
+}
+
 .features-title {
+    margin-bottom: 10px;
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
@@ -172,23 +199,51 @@ body {
 
 /* Section functions */
 
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
 .section-title {
+    margin-bottom: 50px;
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
+    margin-bottom: 50px;
+}
+
+.functions-list {
+    display: flex;
+
+}
+
+.functions-item {
+
 }
 
 /* Section team */ 
 
 .team {
     background-color: #F5F4FA;
+    padding-top: 94px;
+    padding-bottom: 94px;
 }
-.team-card {
+.team-list {
+    display: flex;
+}
+.team-item {
+    padding-bottom: 30px;
+}
+.team-foto {
+    margin-bottom: 30px;
+}
+.team-name {
+    margin-bottom: 10px;
     color: var(--title-text-color);
     font-weight: 500;
 }
 .team-text,
-.team-card {
+.team-name {
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
@@ -198,12 +253,18 @@ body {
 /* footer */
 
 .footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
     background-color: var(--secondary-bg-color);
 }
 .address {
+    padding-top: 20px;
     font-style: normal;
     font-size: 14px;
     line-height: 1.71;
+}
+.address-item:not(:last-child) {
+    margin-bottom: 9px;
 }
 .address-link {
     color: rgba(255, 255, 255, 0.6);
@@ -219,6 +280,9 @@ body {
 /*-------------- Page portfolio ------------ */
 
 /* filter */
+.filter-list {
+    display: flex;
+}
 .filter-button {
     color: var(--title-text-color);
     background-color: #F5F4FA;
