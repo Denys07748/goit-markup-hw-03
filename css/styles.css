@@ -10,6 +10,8 @@
     --primery-bg-color: #FFFFFF;
     --secondary-bg-color: #2F303A;
     --header-logo-color: #000;
+    --card-gap: 30px;
+    --card-item: 3;
 } 
 
 /* Reset */
@@ -31,6 +33,8 @@ p, h1, h2, h3 {
 
 img {
     display: block;
+    width: 100%;
+    height: auto;
 }
 
 
@@ -81,10 +85,6 @@ body {
     width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
-}
-
-.item:not(:last-child) {
-    margin-right: 30px;
 }
 
 
@@ -180,7 +180,7 @@ body {
     text-transform: uppercase;
 }
 .hero-button {
-    padding: 10px 32px 10px 32px;
+    padding: 10px 32px;
     color: var(--primery-bg-color);
     background-color: var(--accent-color);
     font-weight: 700;
@@ -199,15 +199,21 @@ body {
 
 .features {
     padding-top: 94px;
+    --card-item: 4;
 }
 
-.features-list {
+.card-set {
     display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--card-gap));
+    margin-left: calc(-1 * var(--card-gap));
 }
 
-.features-item {
-    width: 270px;
-}
+.item {
+    flex-basis: calc(100% / var(--card-item) - var(--card-gap));
+    margin-top: var(--card-gap);
+    margin-left: var(--card-gap);
+} 
 
 .features-title {
     margin-bottom: 10px;
@@ -228,25 +234,17 @@ body {
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
-    margin-bottom: 50px;
 }
 
-.functions-list {
-    display: flex;
-
-}
 
 
 /* Section team */ 
 
 .team {
     background-color: #F5F4FA;
-    padding-top: 94px;
-    padding-bottom: 94px;
+    --card-item: 4;
 }
-.team-list {
-    display: flex;
-}
+
 .team-item {
     padding-bottom: 30px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -275,8 +273,11 @@ body {
     padding-bottom: 60px;
     background-color: var(--secondary-bg-color);
 }
+.footer .logo {
+    display: block;
+    margin-bottom: 20px;
+}
 .address {
-    padding-top: 20px;
     font-style: normal;
     font-size: 14px;
     line-height: 1.71;
@@ -324,29 +325,13 @@ body {
 .current-btn {
     color: var(--primery-bg-color);
     background-color: var(--accent-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* project */
 
-.project-list {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.project-item {
-    width: calc((100% - 60px) / 3);
-}
-
-.project-item:not( :nth-child(3n)) {
-    margin-right: 30px;
-}
-
-.project-item:not( :nth-last-child(-n + 3)) {
-    margin-bottom: 30px;
-}
-
 .project-caption {
-    padding: 20px 24px 20px 24px;
+    padding: 20px 24px;
     border: 1px solid #EEEEEE;
     border-top: 0;
 }
