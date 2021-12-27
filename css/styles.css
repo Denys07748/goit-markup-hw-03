@@ -203,20 +203,6 @@ body {
     --card-item: 4;
 }
 
-.features-item::before {
-    display: block;
-    content: "";
-    height: 120px;
-    border-radius: 4px;
-    margin-bottom: var(--card-gap);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: var(--additional-bg-color);
-}
-
-
-
 .card-set {
     display: flex;
     flex-wrap: wrap;
